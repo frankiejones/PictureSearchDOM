@@ -13,6 +13,7 @@ const clear = document.getElementById('remove');
 let box = document.createElement("div");
 
 
+
 submit.addEventListener ('click', () => { // when you click submit, all the below should happen
     console.log("submit button clicked");
     console.log(noBoxes.value); //how many boxes should appeear
@@ -25,7 +26,7 @@ submit.addEventListener ('click', () => { // when you click submit, all the belo
         box.classList.add('box'); //naming the div with a class of box
         wrapper.appendChild(box); //put them inside the wrapper div
 
-        let ranNo = Math.ceil(Math.random(1))*300;
+        let ranNo = Math.ceil(Math.random()*300);
         console.log(ranNo);
         let ranImg = document.createElement("img"); //create an img
         ranImg.classList.add('img'); //call it img
@@ -46,21 +47,6 @@ clear.addEventListener ('click', () => {
     };
 }); 
 
-
-//jsut for generating the divs, deffo works
-// submit.addEventListener ('click', () => { // when you click submit, all the below should happen
-//     console.log("submit button clicked");
-//     console.log(input2.value); //how many boxes should appeear
-//     console.log(input1.value); //what the user searched for
-
-
-//     let boxs = parseInt(input2.value); // changing the number to a number value
-//     for (i = 0; i < boxs; i++) { //how ever many numbers were entered, create that many boxes
-//         let box = document.createElement("div");
-//         box.classList.add('box'); //naming the div with a class of box
-//         wrapper.appendChild(box); //put them inside the wrapper div
-//     };
-// });
 
 
 
